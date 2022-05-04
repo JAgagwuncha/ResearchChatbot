@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Options.css";
 
+//For quesitons with options the user can click on, they need options. This is the default template for options that is used in all widgets
 const Options = props => {
   return (
     <div className="options">
