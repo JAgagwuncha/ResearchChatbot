@@ -8,7 +8,16 @@ class MessageParser {
         if (message.includes('hello')) {
           this.actionProvider.handleHello();
         }
+      
+
+      if (
+        message.includes("options") ||
+        message.includes("Go!") ||
+        message.includes("do for me")
+      ) {
+        return this.actionProvider.handleOptions({ withAvatar: true });
       }
   }
+}
 
   export default MessageParser;
