@@ -3,6 +3,8 @@ import { createChatBotMessage } from "react-chatbot-kit";
 
 //Imports for Widgets
 import Consent from "../widgets/Consent/Consent";
+import Gender from "../widgets/Gender/Gender";
+import Age from "../widgets/Age/Age";
 
 //Setting chatbot name
 const botName = "Research Bot";
@@ -16,6 +18,8 @@ const config = {
     ),
     //Calling the consent widget
     { widget: "Consent" },
+
+    // createChatBotMessage('Pick a username! Enter it below!')
   ],
   botName: botName,
   customStyles: {
@@ -33,6 +37,9 @@ const config = {
       widgetName: "Consent",
       widgetFunc: (props) => <Consent {...props} />,
     },
+    { widgetName: "Gender", widgetFunc: (props) => <Gender {...props} /> },
+    { widgetName: "Age", widgetFunc: (props) => <Age {...props} /> },
+    
   ],
 };
 

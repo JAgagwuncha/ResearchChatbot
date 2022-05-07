@@ -14,8 +14,11 @@ const Options = props => {
               className="option-item"
               onClick={option.handler}
               key={option.id}
+              // name={option.name}
             >
+              {/* This is where the actual options are sent out */}
               {option.name}
+              {/* console.log(option.name) */}
             </div>
           );
         })}
